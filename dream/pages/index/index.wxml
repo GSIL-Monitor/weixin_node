@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+    <view class='index-title'>
+        您的梦想清单        
+        <view class='addDream'><image src='../../img/addDream.png'></image>
+    </view>
+    <view wx:for="{{dreamList}}" wx:key="{{ index }}">
+        <text>{{item.title}}</text>
+    </view>
+    </view>
+</view>

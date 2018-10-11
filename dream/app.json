@@ -1,0 +1,31 @@
+{
+    "pages": [
+        "pages/login/login",
+        "pages/index/index",
+        "pages/me/me"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#dddddd",
+        "navigationBarTitleText": "梦想清单",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "selectedColor": "#d81e06",
+        "color": "#dddddd",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "./img/index.png",
+                "selectedIconPath": "./img/indexSelected.png"
+            },
+            {
+                "pagePath": "pages/me/me",
+                "text": "我的",
+                "iconPath": "./img/me.png",
+                "selectedIconPath": "./img/meSelected.png"
+            }
+        ]
+    }
+}

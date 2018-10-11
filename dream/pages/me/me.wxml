@@ -1,0 +1,5 @@
+<!--pages/me/me.wxml-->
+<view class=''>
+    {{ userInfo.id }}
+    <image src='{{ userInfo.avatarUrl  }}'></image>
+</view>
