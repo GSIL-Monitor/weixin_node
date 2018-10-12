@@ -1,11 +1,5 @@
-<!--index.wxml-->
+<!--pages/completeDream/completeDream.wxml-->
 <view class="container">
-    <view class='index-title'>
-        您的梦想清单        
-        <view class='addDream' bindtap='indexJump'>
-            <image src='../../img/addDream.png'></image>
-        </view>
-    </view>
     <view class='index-content'>
         <view class='dream-box' wx:for="{{dreamList}}" wx:key="{{ index }}">
             <view class="dreamList" 

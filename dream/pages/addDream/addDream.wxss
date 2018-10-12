@@ -1,0 +1,52 @@
+/* pages/addDream/addDream.wxss */
+.dreamImg{
+    width: 100%;
+}
+.dreamImg image{
+    display: block;
+    width: 100%;
+}
+.dreamTitle{
+    width:100%;
+    height:100rpx;
+    border-bottom:1px dashed #ddd;
+}
+.dreamTitle input{
+    padding: 0 15rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    color:#333;
+    font-size:13px;
+}
+.dreamDesc{
+    width:100%;
+    height:200rpx;
+    padding: 15rpx 15rpx;
+    border-bottom: 1px dashed #ddd;
+}
+.dreamDesc textarea{
+    color:#333;
+    font-size:13px;
+    width:720rpx;
+    height:200rpx;
+}
+.startTime{
+    padding:0 15rpx;
+    height:100rpx;
+    border-bottom:1px dashed #ddd;
+}
+.picker{
+    line-height:100rpx;
+    color:#999;
+    font-size: 13px;
+}
+
+.dreamBtn{
+    margin: 50rpx 0;
+    padding: 0 15rpx;
+}
+
+text{
+    color:#333;
+    margin-left: 10rpx;
+}

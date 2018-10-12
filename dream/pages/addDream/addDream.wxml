@@ -1,0 +1,33 @@
+<!--pages/addDream/addDream.wxml-->
+<view class='dreamImg'><image mode='widthFix' src="../../img/dreamBg.jpg"></image></view>
+<view class='dreamTitle'>
+    <input value='{{ dreamTitle }}' bindinput='dreamTitleInput' placeholder="请输入梦想标题" ></input>
+</view>
+<view class='dreamDesc'>
+    <textarea bindinput='dreamDescInput'  value='{{ dreamDesc }}' placeholder-style="color:#999;" placeholder='请输入梦想描述'></textarea>
+</view>
+<view class='startTime'>
+    <view class="section">
+        <picker mode="date" value="{{startTime}}" start="{{ currentTime }}" end="2020-12-31"
+            bindchange="bindStartDateChange"
+        >
+            <view class="picker">
+                开始时间: <text>{{startTime}}</text>
+            </view>
+        </picker>
+    </view>
+</view>
+<view class='startTime'>
+    <view class="section">
+        <picker mode="date" value="{{endTime}}" start="{{ currentTime }}" end="2020-12-31"
+            bindchange="bindEndDateChange"
+        >
+            <view class="picker">
+                开始时间: <text>{{endTime}}</text>
+            </view>
+        </picker>
+    </view>
+</view>
+
+
+<view class='dreamBtn'><button type='primary' bindtap="addDream">添加梦想</button></view>

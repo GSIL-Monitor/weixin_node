@@ -1,6 +1,7 @@
+/* pages/completeDream/completeDream.wxss */
 /**index.wxss**/
 .container{
-    padding-top: 120rpx;
+    padding-top: 20rpx;
 }
 .index-title{
     width:750rpx;

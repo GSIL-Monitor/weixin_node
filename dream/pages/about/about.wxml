@@ -1,0 +1,4 @@
+<!--pages/about/about.wxml-->
+<view class='container'>
+    <view>一个简简单单的前端工程师。</view>
+</view>

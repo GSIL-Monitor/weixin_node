@@ -2,7 +2,10 @@
     "pages": [
         "pages/login/login",
         "pages/index/index",
-        "pages/me/me"
+        "pages/me/me",
+        "pages/addDream/addDream",
+        "pages/about/about",
+        "pages/completeDream/completeDream"
     ],
     "window": {
         "backgroundTextStyle": "light",

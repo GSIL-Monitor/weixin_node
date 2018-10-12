@@ -1,24 +1,19 @@
-// pages/me/me.js
-
-var app = getApp()
+// pages/completeDream/completeDream.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        userInfo: {}
+        dreamList: [],
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        var that = this;
-        let userData = wx.getStorageSync("userData")
-        that.setData({
-            userInfo: userData
-        })
+        let that = this;
+        that.getDreamData();
     },
 
     /**
@@ -53,7 +48,8 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
-
+        let that = this;
+        that.getDreamData();
     },
 
     /**
@@ -69,14 +65,23 @@ Page({
     onShareAppMessage: function () {
 
     },
-    about: function(){
-        wx.navigateTo({
-            url: '../about/about',
-        })
+    getDreamData: function () {
+        let that = this;
+        let id = wx.getStorageSync("userData").id;
+        wx.request({
+            url: getApp().globalData.urlPath + '/getCompleteDreamData',
+            method: 'GET',
+            data: {
+                id: id
+            },
+            success: function (res) {
+                if (res.data.code == '0') {
+                    let dreamList = [];
+                    that.setData({
+                        dreamList: res.data.data
+                    })
+                }
+            }
+        });
     },
-    completeDream: function(){
-        wx.navigateTo({
-            url: '../completeDream/completeDream',
-        })
-    }
 })

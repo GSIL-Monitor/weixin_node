@@ -1,5 +1,11 @@
 <!--pages/me/me.wxml-->
-<view class=''>
-    {{ userInfo.id }}
-    <image src='{{ userInfo.avatarUrl  }}'></image>
+<view class='container'>
+    <view class='me-title'>
+        <view class='title-img'><image src="{{ userInfo.avatarUrl }}"></image></view>
+        <view class='title-name'>{{ userInfo.nickName  }}</view>
+    </view>
+    <view class='me-content'>
+        <view class='content-list' bindtap='about'>关于我 <image src='../../img/left.png'></image></view>
+        <view class='content-list' bindtap='completeDream'>已完成的梦想 <image src='../../img/left.png'></image></view>
+    </view>
 </view>

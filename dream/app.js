@@ -7,8 +7,8 @@ App({
             success: res => {
                 // 发送 res.code 到后台换取 openId, sessionKey, unionId
                 wx.request({
-                    // url: 'http://192.168.3.80:3000/login',
-                    url: 'http://192.168.0.102:3000/login',
+                    url: 'http://192.168.3.80:3000/login',
+                    // url: 'http://192.168.0.102:3000/login',
                     method: 'POST',
                     header:{
                         'content-type': 'application/json'
@@ -33,7 +33,7 @@ App({
     globalData: {
         userInfo: null,
         openid: null,
-        // urlPath: 'http://192.168.3.80:3000'
-        urlPath: 'http://192.168.0.102:3000'
+        urlPath: 'http://192.168.3.80:3000'
+        // urlPath: 'http://192.168.0.102:3000'
     }
 })

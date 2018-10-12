@@ -31,12 +31,13 @@ Page({
     },
     bindGetUserInfo: function (e) {
         var that = this;
+        let openid = wx.getStorageSync('openid');
         if (e.detail.userInfo) {            
             wx.request({                
                 url: getApp().globalData.urlPath + '/insertUserData',
                 method: 'POST',                                  
                 data: {                    
-                    openid: getApp().globalData.openid,                    
+                    openid: openid,                    
                     nickName: e.detail.userInfo.nickName,                    
                     avatarUrl: e.detail.userInfo.avatarUrl,  
                     province:e.detail.userInfo.province,
@@ -48,8 +49,15 @@ Page({
                     'content-type': 'application/json'                
                 },                
                 success: function (res) {                    
-                    //从数据库获取用户信息                    
-                    that.getUsreInfo();               
+                    //从数据库获取用户信息  
+                    if(res.data.code=='0'){
+                        that.getUsreInfo();
+                    }else{
+                        wx.showToast({
+                            title: res.data.message,
+                        })
+                    }                  
+                                   
                 }            
 
             });            
