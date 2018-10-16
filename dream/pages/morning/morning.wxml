@@ -1,0 +1,10 @@
+<view class='container'>
+    <canvas 
+        canvas-id='canvasId' 
+        style="height:{{ canvasHeight }}rpx;"
+    ></canvas>
+
+    <button bindtap="strokeSave">保存</button>
+
+
+</view>

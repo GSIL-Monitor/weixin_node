@@ -21,7 +21,7 @@ connection.connect();
 router.post('/login',function(req,res,next){
 	if(req.body.code){
 		console.log(req.body.code)
-		var url = 'https://api.weixin.qq.com/sns/jscode2session?appid=你的APPID&secret=你的密钥&grant_type=authorization_code&js_code='+req.body.code;
+		var url = 'https://api.weixin.qq.com/sns/jscode2session?appid=wxf1acfccd1a913249&secret=59554b50d3d3dbba11b9242b680c8966&grant_type=authorization_code&js_code='+req.body.code;
 		request(url, function (error, response, body) {
   			if (!error && response.statusCode == 200) {
   				var bodyData = JSON.parse(body)
@@ -96,8 +96,6 @@ router.post('/insertUserData', function(req, res, next) {
 // 获取用户数据
 router.get('/getUserData', function(req, res, next) {
 
-  	console.log(req.query.openid)
-
   	if(!req.query.openid){
   		res.send({
 		    code: '1001',
@@ -159,7 +157,6 @@ router.get('/getDreamData', function(req, res, next) {
 				res.render("查找失败"+err.message);
 				return
 			}else{
-				console.log(result)
 				if(result){
 		    		res.send({
 					    code: '0',
@@ -175,8 +172,6 @@ router.get('/getDreamData', function(req, res, next) {
 
 
 router.post('/deleteDreamData', function(req, res, next) {
-	console.log(req.body.id)
-	console.log(req.body.userId)
 
 	if(!req.body.id || !req.body.userId){
 		res.send({
@@ -187,7 +182,6 @@ router.post('/deleteDreamData', function(req, res, next) {
 		return
 	}else{
 		connection.query("delete from dream where userId ='"+req.body.userId+"'and id='"+req.body.id+"';",function(err,result){
-			console.log(err)
 			if(err){
 				res.render("查找失败"+err.message);
 				return
@@ -207,7 +201,6 @@ router.post('/deleteDreamData', function(req, res, next) {
 
 
 router.post('/completeDreamData', function(req, res, next) {
-
 	if(!req.body.id || !req.body.userId){
 		res.send({
 		    code: '0',
@@ -222,7 +215,6 @@ router.post('/completeDreamData', function(req, res, next) {
 				res.render("查找失败"+err.message);
 				return
 			}else{
-				console.log(result)
 				if(result){
 		    		res.send({
 					    code: '0',
@@ -243,7 +235,6 @@ router.get('/getCompleteDreamData', function(req, res, next) {
 				res.render("查找失败"+err.message);
 				return
 			}else{
-				console.log(result)
 				if(result){
 		    		res.send({
 					    code: '0',
