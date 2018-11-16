@@ -1,25 +1,160 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset='utf-8'>
-  <title>js typing</title>
- </head>
- <body>
-  <div id='divTyping'></div>
-  <script>
-   var str = 'js 实现的 打字效果，感觉蛮有趣的。';
-   var i = 0;
-   function typing(){
-    var divTyping = document.getElementById('divTyping');
-    if (i <= str.length) {
-     divTyping.innerHTML = str.slice(0, i++) + '_';
-     setTimeout('typing()', 200);//递归调用
-    }
-    else{
-     // divTyping.innerHTML = str;//结束打字,移除 _ 光标
-    }
-   }
-   typing();
-  </script>
- </body>
+<head>
+	<title>前端</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+			background:#f4f4f4;
+		}
+		.main{
+			width:1200px;
+			height: auto;
+			margin: 0 auto 30px;
+			background:#fff;
+			overflow:hidden;
+		}
+		.title{
+			width:100%;
+			line-height: 40px;
+			background:#f9f9f9;
+			background:#fff;
+		}
+		.content{
+			width:100%;
+			background:#fff;
+		}
+		.content h4{
+			width:100%;
+			line-height: 36px;
+			margin-bottom: 5px;
+			background:#fff;
+		}
+		.content p{
+			width:100%;
+			line-height: 30px;
+			margin-bottom: 20px;
+			background:#fff;
+		}
+		.content h5{
+			line-height: 32px;
+			background:#fff;
+		}
+		pre{
+			background:#fff;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<h3 class="title">跨域</h3>
+		<div class="content">
+			<h4>为什么会出现跨域？</h4>
+			<p>浏览器对于javascript的同源策略的限制,例如a.cn下面的js不能调用b.cn中的js,对象或数据(因为a.cn和b.cn是不同域),所以跨域就出现了.</p>
+			<h4>同域的概念</h4>
+			<p>相同域名,端口相同,协议相同</p>
+			<h4>同源策略</h4>
+			<p>请求的url地址,必须与浏览器上的url地址处于同域上,也就是域名,端口,协议相同.</p>
+			<h4>怎么解决跨域？</h4>
+			<h5>1.jsonp</h5>
+			<p>ajax请求受同源策略影响，不允许进行跨域请求，而script标签src属性中的链接却可以访问跨域的js脚本，利用这个特性，服务端不再返回JSON格式的数据，而是返回一段调用某个函数的js代码，在src中进行了调用，这样实现了跨域。</p>
+			<pre>
+				<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+				<script>	
+					// $.ajax({
+			        //    type : "GET",
+			        //    async: false,
+			        //    url : "http://www.practice-zhao.com/student.php?id=1",
+			        //    dataType: "jsonp",
+			        //    jsonp:"callback", //请求php的参数名
+			        //    jsonpCallback: "jsonhandle",//要执行的回调函数
+			        //    success : function(data) {
+			        //        alert(data);
+			        //    }
+			        // });
+		    	</script>
+			</pre>
+			<h5>2.nginx代理</h5>
+			<p>
+				<pre>
+					server {
+				        listen       80; #监听80端口，可以改成其他端口
+				        server_name  localhost; # 当前服务的域名
+				        #charset koi8-r;
+				        #access_log  logs/host.access.log  main;
+				        location / {
+				            proxy_pass http://localhost:81;
+				            proxy_redirect default;
+				        }
+						location /apis { #添加访问目录为/apis的代理配置
+							rewrite  ^/apis/(.*)$ /$1 break;
+							proxy_pass   http://localhost:82;
+				       }
+				</pre>
+			</p>
+			<h5>3.其他方式代理</h5>
+			<p>node.js代理</p>
+			<h5>4.window.name+iframe 需要目标服务器响应window.name。</h5>
+			<h5>5.html5的 postMessage+ifrme 这个也是需要目标服务器或者说是目标页面写一个postMessage，主要侧重于前端通讯。</h5>
+			<h5>6.CORS  需要服务器设置header ：Access-Control-Allow-Origin。</h5>
+		</div>
+	</div>
+	<div class="main">
+		<h3 class="title"></h3>
+		<div class="content">
+			<h4>为什么会出现跨域？</h4>
+			<p>浏览器对于javascript的同源策略的限制,例如a.cn下面的js不能调用b.cn中的js,对象或数据(因为a.cn和b.cn是不同域),所以跨域就出现了.</p>
+			<h4>同域的概念</h4>
+			<p>相同域名,端口相同,协议相同</p>
+			<h4>同源策略</h4>
+			<p>请求的url地址,必须与浏览器上的url地址处于同域上,也就是域名,端口,协议相同.</p>
+			<h4>怎么解决跨域？</h4>
+			<h5>1.jsonp</h5>
+			<p>ajax请求受同源策略影响，不允许进行跨域请求，而script标签src属性中的链接却可以访问跨域的js脚本，利用这个特性，服务端不再返回JSON格式的数据，而是返回一段调用某个函数的js代码，在src中进行了调用，这样实现了跨域。</p>
+			<pre>
+				<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+				<script>	
+					
+		    	</script>
+			</pre>
+			<h5>2.nginx代理</h5>
+			<p>
+				<pre>
+					server {
+				        listen       80; #监听80端口，可以改成其他端口
+				        server_name  localhost; # 当前服务的域名
+				        #charset koi8-r;
+				        #access_log  logs/host.access.log  main;
+				        location / {
+				            proxy_pass http://localhost:81;
+				            proxy_redirect default;
+				        }
+						location /apis { #添加访问目录为/apis的代理配置
+							rewrite  ^/apis/(.*)$ /$1 break;
+							proxy_pass   http://localhost:82;
+				       }
+				</pre>
+			</p>
+			<h5>3.其他方式代理</h5>
+			<p>node.js代理</p>
+			<h5>4.window.name+iframe 需要目标服务器响应window.name。</h5>
+			<h5>5.html5的 postMessage+ifrme 这个也是需要目标服务器或者说是目标页面写一个postMessage，主要侧重于前端通讯。</h5>
+			<h5>6.CORS  需要服务器设置header ：Access-Control-Allow-Origin。</h5>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	function a(){
+		var i = 1;
+		function b(){
+			alert(i)
+		}
+		return b
+	}
+	var c = a()
+	c()
+</script>
 </html>

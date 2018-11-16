@@ -1,0 +1,21 @@
+@homecolor: #ff3333;
+
+
+body{
+	background:@homecolor;
+}
+
+.box{
+	composes: bigBox from './common.less';
+	height: 200px;
+	width: 200px;
+	background:@homecolor;
+	transition: transform 1s;
+}
+
+
+.bigBox{
+	height:400px;
+	width:400px;
+		
+}
