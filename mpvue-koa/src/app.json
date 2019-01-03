@@ -1,0 +1,40 @@
+{
+    "pages": [
+        "pages/my/main",
+        "pages/index/main",
+        "pages/login/main",
+        "pages/gadget/main",
+        "pages/logs/main",
+        "pages/counter/main"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#cccccc",
+        "navigationBarTitleText": "mpvue",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "selectedColor": "#1afa29",
+        "color": "#333333",
+        "list": [
+            {
+                "pagePath": "pages/index/main",
+                "text": "首页",
+                "iconPath": "static/img/indexHome.png",
+                "selectedIconPath":"static/img/indexHomeSelected.png"
+            },
+            {
+                "pagePath": "pages/gadget/main",
+                "text": "小工具",
+                "iconPath": "static/img/tool.png",
+                "selectedIconPath":"static/img/toolSelected.png"
+            },
+            {
+                "pagePath": "pages/my/main",
+                "text": "我的",
+                "iconPath": "static/img/my.png",
+                "selectedIconPath":"static/img/mySelected.png"
+            }
+        ]
+    }
+}
