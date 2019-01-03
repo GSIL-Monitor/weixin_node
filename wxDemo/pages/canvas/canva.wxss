@@ -1,0 +1,10 @@
+/* pages/canvas/canva.wxss */
+canvas{
+    display: block;
+    width:100%;
+    background-color:black; 
+}
+
+button{
+    margin: 50rpx;
+}

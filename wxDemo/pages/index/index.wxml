@@ -1,0 +1,103 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view id="header">
+    <image class='header-bg' mode="widthFix" src="./img/bg.jpg"></image>
+    <image class='header-skl' mode="widthFix" src="./img/skl.png"></image>
+    <view class='header-message'>
+      <view class='message-text'>
+        <image class='message-icon' mode="widthFix" src="./img/name.png"></image>
+        <text class='message-iconText'>宋康乐</text>
+      </view>
+      <view class='message-text'>
+        <image  class='message-icon' mode="widthFix" src="./img/address.png"></image>
+        <text class='message-iconText'>山西临汾</text>
+      </view>
+      <view class='message-text'>
+        <image  class='message-icon' mode="widthFix" src="./img/birthday.png"></image>
+        <text class='message-iconText'>1995.08</text>
+      </view>
+      <view class='message-text'>
+        <image  class='message-icon' mode="widthFix" src="./img/email.png"></image>
+        <text class='message-iconText'>sklhtml@163.com</text>
+      </view>
+      <view class='message-text' bindtap='tel'>
+        <image  class='message-icon' mode="widthFix" src="./img/phone.png"></image>
+        <text class='message-iconText'>请点击联系</text>
+      </view>
+    </view>
+  </view>
+  <view id="content">
+    <swiper>
+        <swiper-item>
+            <view class='sheet'>
+                <view class='contentHeader'>
+                    <image class='contentHeaderImg' mode="widthFix"     
+                    src='./img/introduction.png'></image>
+                </view>
+                <view class='textSelection'>
+                    <text class='textTitle'>宋康乐</text>
+                    <text>男 | 23(1995.08)</text>
+                    <text>2年前端开发经验，熟练使用html、css、js、jquery、vue及vue生态圈，了解react，使用gulp构建自动化等，对小程序有一定的认知并熟练使用。</text>
+                    <text></text>
+                </view>
+            </view>   
+        </swiper-item>
+        <swiper-item>
+            <view class='sheet'>
+                <view class='contentHeader'>
+                    <image class='contentHeaderImg' mode="widthFix"     
+                    src='./img/introduction.png'></image>
+                </view>
+                <view class='textSelection'>
+                    <text class='textTitle'>2017.10-至今</text>
+                    <text>公司：杭州万家乐科技有限公司</text>
+                    <text>岗位：前端开发工程师</text>
+                    <text></text>
+                </view>
+            </view>   
+        </swiper-item>
+        <swiper-item>
+            <view class='sheet'>
+               <view class='contentHeader'>
+                    <image class='contentHeaderImg' mode="widthFix"     
+                    src='./img/work.png'></image>
+                </view>
+                <view class='textSelection'>
+                    <text class='textTitle'>2017.10-至今</text>
+                    <text>公司：杭州万家乐科技有限公司</text>
+                    <text>岗位：前端开发工程师</text>
+                    <text></text>
+                </view>
+            </view>   
+        </swiper-item>
+        <swiper-item>
+            <view class='sheet'>
+                <view class='contentHeader'>
+                    <image class='contentHeaderImg' mode="widthFix"     
+                    src='./img/education.png'></image>
+                </view>
+                <view class='textSelection'>
+                    <text class='textTitle'>2013.9-2017.6</text>
+                    <text>西安外事学院</text>
+                    <text>硕士学位</text>
+                    <text></text>
+                </view>
+            </view>   
+        </swiper-item>
+    </swiper>
+  </view>
+</view> -->
+
+
+
+<view class='parents'>
+    <!-- <view class='children red'>1</view>
+    <view class='children blue'>2</view>
+    <view class='children green'>3</view>
+    <view class='children blank'>4</view> -->
+    <button type='primary' open-type='getUserInfo' bindtap='login'>登陆</button>
+
+    <text>{{ userInfo.nickName }}</text>
+    <image src='{{ userInfo.avatarUrl }}'></image>
+
+</view>

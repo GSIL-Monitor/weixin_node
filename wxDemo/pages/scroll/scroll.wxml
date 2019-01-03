@@ -1,0 +1,106 @@
+<!--pages/scroll.wxml-->
+<scroll-view scroll-y="true" 
+    bindscrolltoupper="upper"
+    bindscrolltolower="lower"
+    bindscroll="scroll"
+    scroll-top="{{ scrollTop }}"
+    scroll-into-view="{{ id }}"
+>
+    <view class='viewitem red'></view>
+    <view class='viewitem blue'></view>
+    <view class='viewitem green'></view>
+    <view id="yellow" class='viewitem yellow'></view>
+</scroll-view>
+
+<button bindtap="scrolltwo">scroll to 200</button>
+<button bindtap="scrollintoview">scrollintoview</button>
+
+
+<icon type='success' size="25" color="#ff0000"></icon>
+
+<view>1111111111</view>
+
+<button bindtap='getData'>获取数据</button>
+
+
+
+
+<image src='{{ tmpImageUrl }}' mode='widthFix' bindload='tempImageLoaded' style='width:{{ flexImageSize.width }};height:{{ flexImageSize.height }};'></image>
+
+<button type='primary' bindtap='upLoad'>上传图片</button>
+
+<view class='line'>-------------------------------</view>
+
+<button type='primary' bindtap='upLoad2'>上传图片2</button>
+
+<view class='line'>-------------------------------</view>
+
+
+<button type='primary' bindtap='downLoad'>下载</button>
+
+<view class='line'>-------------------------------</view>
+
+
+<button type='primary' bindtap='map'>地图</button>
+<map id='myMap' show-location></map>
+
+<view class='line'>-------------------------------</view>
+
+
+
+<view class='line'>-------------------------------</view>
+<button type='primary' bindtap='play'>开始播放</button>
+<button type='primary' bindtap='pause'>暂停播放</button>
+<button type='primary' bindtap='stop'>停止播放</button>
+<button type='primary' bindtap='seek'>从第五秒开始播放</button>
+
+<button type='primary' bindtap='getStatus'>获得状态</button>
+
+
+<view class='line'>-------------------------------</view>
+
+
+<progress percent='{{ audioPercent }}' stroke-width='12' ></progress>
+<audio poster='{{ poster }}'  name='{{ name }}' author='{{ author }}' src='{{ src }}' id='myAudio' controls loop></audio>
+<!--> 
+    id              audio 组件的唯一标识符     
+    src             要播放音频的资源地址
+    loop            是否循环播放
+    controls        是否显示默认控件
+    poster          默认控件上的音频封面的图片资源地址，如果 controls 属性值为 false 则设置 poster 无效
+    name            默认控件上的音频名字，如果 controls 属性值为 false 则设置 name 无效 
+    author          默认控件上的作者名字，如果 controls 属性值为 false 则设置 author 无效
+    binderror       当发生错误时触发 error 事件，detail = {errMsg: MediaError.code}
+    bindplay        当开始/继续播放时触发play事件
+    bindpause       当暂停播放时触发 pause 事件
+    bindtimeupdate  当播放进度改变时触发 timeupdate 事件，detail = {currentTime, duration}
+    bindended       当播放到末尾时触发 ended 事件
+<-->
+<button type='primary' bindtap='audioPlay'>音频开始播放</button>
+<button type='primary' bindtap='audioPause'>音频暂停播放</button>
+<button type='primary' bindtap='audio15'>音频到15秒</button>
+<button type='primary' bindtap='audioStart'>回到开头</button>
+
+
+
+
+<view class='line'>-------------------------------</view>
+
+<video id='myVideo' 
+    src='{{ src1 }}' 
+    enable-danmu 
+    danmu-btn
+    danmu-list="{{danmuList}}"
+    controls
+    controls></video>
+
+<view class='btn-area'>
+    <input bindblur='inputBlur'></input>
+    <button type="primary" bindtap='sendDanmu'>发送弹幕</button>
+</view>
+
+
+
+<button type='primary' bindtap='findVideo'>获取视频</button>
+
+

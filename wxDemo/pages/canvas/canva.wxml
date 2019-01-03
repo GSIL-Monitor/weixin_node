@@ -1,0 +1,20 @@
+<!--pages/canvas/canva.wxml-->
+<view style='text-align:center;'>canvas的学习</view>
+
+
+<view>{{ user.name }}</view>
+<view>{{ user.sex  }}</view>
+
+<view>---------------</view>
+
+<!-- 绘制图片北京前景 -->
+<canvas 
+    canvas-id='firstCanvas' 
+    style="height:{{ canvasHeight }}rpx"
+></canvas>
+
+<button class='button' type='primary' bindtap='strokeImage'>绘制图片</button>
+<button class='button' type='primary' bindtap='stroketText'>绘制文字</button>
+<button class='button' type='primary' bindtap='strokeLine'>绘制线条</button>
+<button class='button' type='primary' bindtap='strokeSave'>保存图形</button>
+

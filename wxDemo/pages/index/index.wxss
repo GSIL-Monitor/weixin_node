@@ -1,0 +1,135 @@
+/**index.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  background-color: #040e18;
+} 
+#header{
+  width:100%;
+  display:flex;
+  position:relative;
+}
+.header-bg{
+  display:block;
+  width:750rpx;
+}
+.header-skl{
+  display: block;
+  width:250rpx;
+  position:absolute;
+  top:150rpx;
+  left:50rpx;
+}
+.header-message{
+  width:350rpx;
+  position:absolute;
+  right: 50rpx;
+  top: 60rpx;
+}
+.message-text{
+  display:blcok;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  overflow:hidden;
+  margin-bottom: 20rpx;
+  height:60rpx;
+}
+.message-icon{
+  display:block;
+  width: 60rpx;
+  float:left;
+}
+.message-iconText{
+  display:block;
+  font-size:30rpx;
+  color: #ffffff;
+  float:left;
+  line-height: 60rpx;
+  margin-left:10rpx;
+}
+
+
+#content{
+  width:100%;
+  height: 1000rpx;
+  background:#040e18; 
+}
+.contentHeaderImg{
+    disolay:block;
+    width: 100%;
+}
+
+.textSelection {
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding:50rpx;
+}
+text{
+    display:block;
+    font-size: 16px;
+    color:#fff;
+    margin-top:10px;
+    line-height: 40rpx;
+    margin-bottom:20rpx;
+}
+.textTitle{
+    color: #20A0FF;
+    font-size: 20px;
+}
+swiper,swiper-item, .sheet{
+    width:100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+.parents{
+    width:750rpx;
+    height: 800rpx;
+    background:#cccccc;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.children{
+    width:100rpx;
+    height:100rpx;
+    background:#fff;
+    order:0;
+   
+}
+.red{
+    background:red;
+    order:1;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* flex-grow: 3; */
+}
+.blue{
+    background:blue;
+    flex-shrink: 0.5;
+    flex-basis: 330rpx;
+}
+.green{
+    background:green;
+}
+.blank{
+    background:blank;
+    align-self: flex-end;
+}

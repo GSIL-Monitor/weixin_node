@@ -1,0 +1,34 @@
+{
+    "pages": [
+        "pages/canvas/canva",
+        "pages/scroll/scroll",
+        
+        "pages/index/index",
+        
+        "pages/animation/animation",
+        
+        "pages/logs/logs",
+        "pages/me/me"
+        
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#eee",
+        "navigationBarTitleText": "宋康乐",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "selectedColor": "",
+        
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/me/me",
+                "text": "我的"
+            }
+        ]
+    }
+}

@@ -1,0 +1,9 @@
+<!--pages/animation/animation.wxml-->
+<view>
+    <image mode='widthFix' animation='{{ animationData }}' bindtap='tap' src='./img/1.jpg'></image>
+</view>
+
+
+<button type='primary' bindtap="nav">导航</button>
+
+<button  type='primary' bindtap="jiaohu">交互</button>
